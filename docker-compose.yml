@@ -1,0 +1,15 @@
+services:
+  floorplan-api:
+    build: .
+    image: floorplan-api:latest
+    container_name: floorplan-api
+    ports:
+      - "8000:8000"
+    # `.env` is optional; defaults from app/config.py apply when it is absent.
+    env_file:
+      - path: .env
+        required: false
+    volumes:
+      # Mount trained weights read-only (kept out of the image).
+      - ./weights:/app/weights:ro
+    restart: unless-stopped

@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual envs
+.venv/
+venv/
+env/
+
+# Environment
+.env
+
+# Model weights (large binaries)
+weights/*.h5
+weights/*.pth
+weights/*.onnx
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
